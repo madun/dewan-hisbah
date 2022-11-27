@@ -109,14 +109,14 @@ class BookshelfApiController extends ApiController
         return [
             'create' => [
                 'name'        => ['required', 'string', 'max:255'],
-                'description' => ['string', 'max:5000'],
+                'description' => ['string', 'max:10000'],
                 'books'       => ['array'],
                 'tags'        => ['array'],
                 'image'       => array_merge(['nullable'], $this->getImageValidationRules()),
             ],
             'update' => [
                 'name'        => ['string', 'min:1', 'max:255'],
-                'description' => ['string', 'max:5000'],
+                'description' => ['string', 'max:10000'],
                 'books'       => ['array'],
                 'tags'        => ['array'],
                 'image'       => array_merge(['nullable'], $this->getImageValidationRules()),

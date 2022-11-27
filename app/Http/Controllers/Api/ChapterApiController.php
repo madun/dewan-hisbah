@@ -16,13 +16,13 @@ class ChapterApiController extends ApiController
         'create' => [
             'book_id'     => ['required', 'integer'],
             'name'        => ['required', 'string', 'max:255'],
-            'description' => ['string', 'max:5000'],
+            'description' => ['string', 'max:10000'],
             'tags'        => ['array'],
         ],
         'update' => [
             'book_id'     => ['integer'],
             'name'        => ['string', 'min:1', 'max:255'],
-            'description' => ['string', 'max:5000'],
+            'description' => ['string', 'max:10000'],
             'tags'        => ['array'],
         ],
     ];
