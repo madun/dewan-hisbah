@@ -7,7 +7,10 @@
 
 <div class="form-group description-input">
     <label for="description">{{ trans('common.description') }}</label>
-    @include('form.textarea', ['name' => 'description'])
+    {{-- @include('form.textarea', ['name' => 'description']) --}}
+    <div class="edit-area flex-fill flex" style="height: 40rem">
+        @include('shelves.parts.wysiwyg-editor', ['name' => 'description'])
+    </div>
 </div>
 
 <div component="shelf-sort" class="grid half gap-xl">

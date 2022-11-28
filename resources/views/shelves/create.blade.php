@@ -19,7 +19,7 @@
 
         <main class="card content-wrap">
             <h1 class="list-heading">{{ trans('entities.shelves_create') }}</h1>
-            <form action="{{ url("/shelves") }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url("/shelves") }}" method="POST" autocomplete="off" data-page-id="0" enctype="multipart/form-data">
                 @include('shelves.parts.form', ['shelf' => null, 'books' => $books])
             </form>
         </main>
